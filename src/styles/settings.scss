@@ -1,0 +1,265 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+
+// https://vuetifyjs.com/features/sass-variables/`
+// @use 'vuetify/settings' with (
+//   $color-pack: false
+// );
+
+// @forward "vuetify/settings" with (
+//   $utilities: (
+//     "align-content": false,
+//     "align-items": false,
+//     "align-self": false,
+//     "border-bottom": false,
+//     "border-end": false,
+//     "border-opacity": false,
+//     "border-start": false,
+//     "border-style": false,
+//     "border-top": false,
+//     "border": false,
+//     "display": false,
+//     "flex-direction": false,
+//     "flex-grow": false,
+//     "flex-shrink": false,
+//     "flex-wrap": false,
+//     "flex": false,
+//     "float-ltr": false,
+//     "float-rtl": false,
+//     "float": false,
+//     "font-italic": false,
+//     "font-weight": false,
+//     "justify-content": false,
+//     "margin-bottom": false,
+//     "margin-end": false,
+//     "margin-left": false,
+//     "margin-right": false,
+//     "margin-start": false,
+//     "margin-top": false,
+//     "margin-x": false,
+//     "margin-y": false,
+//     "margin": false,
+//     "negative-margin-bottom": false,
+//     "negative-margin-end": false,
+//     "negative-margin-left": false,
+//     "negative-margin-right": false,
+//     "negative-margin-start": false,
+//     "negative-margin-top": false,
+//     "negative-margin-x": false,
+//     "negative-margin-y": false,
+//     "negative-margin": false,
+//     "order": false,
+//     "overflow-wrap": false,
+//     "overflow-x": false,
+//     "overflow-y": false,
+//     "overflow": false,
+//     "padding-bottom": false,
+//     "padding-end": false,
+//     "padding-left": false,
+//     "padding-right": false,
+//     "padding-start": false,
+//     "padding-top": false,
+//     "padding-x": false,
+//     "padding-y": false,
+//     "padding": false,
+//     "rounded-bottom-end": false,
+//     "rounded-bottom-start": false,
+//     "rounded-bottom": false,
+//     "rounded-end": false,
+//     "rounded-start": false,
+//     "rounded-top-end": false,
+//     "rounded-top-start": false,
+//     "rounded-top": false,
+//     "rounded": false,
+//     "text-align": false,
+//     "text-decoration": false,
+//     "text-mono": false,
+//     "text-opacity": false,
+//     "text-overflow": false,
+//     "text-transform": false,
+//     "typography": false,
+//     "white-space": false,
+//   )
+// );
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+@layer components {
+  .sidebar {
+    @apply bg-[#F3F3F3] dark:bg-Blue-Sidebar  w-[62px] h-[100vh] text-center flex flex-col justify-between;
+
+    a {
+      @apply text-black dark:text-white;
+    }
+  }
+
+  .inputLogin {
+    @apply rounded-lg border h-12 border-[#dcdd] w-full px-4 py-2 focus:outline-none focus:ring-2;
+  }
+
+  .newProject {
+    @apply grid gap-y-4;
+
+    a {
+      @apply flex gap-6 items-center;
+    }
+  }
+
+  .programUseBorder {
+    @apply mt-6 text-Blue-File dark:text-white border-b border-Blue-Border;
+  }
+
+  button.button-canvas {
+    @apply dark:bg-Blue-Sidebar border bg-gray-100 dark:border-Blue-Border rounded p-1 dark:hover:bg-blue-200 hover:border-b-Blue-Border dark:hover:border-white;
+  }
+
+  .secondaryButton {
+    @apply py-2 px-5 rounded border-2 dark:hover:bg-slate-700 dark:border-[#055774] text-Blue-File hover:bg-Blue-File hover:text-white border-Blue-File dark:text-white;
+  }
+
+  .primaryButton {
+    @apply py-2 px-5 rounded   bg-Blue-File dark:hover:bg-slate-700 hover:bg-slate-700  text-white  dark:text-[#B2D4E0] dark:bg-[#055774];
+  }
+
+  .customInput {
+    @apply w-96 h-12 pl-3.5 pb-2 border dark:border-transparent  bg-Input-Bg text-Blue-File dark:text-white   dark:bg-cyan-800 rounded mt-5;
+  }
+
+  .customSelect {
+    @apply w-96 h-12 pl-3.5 pb-2 border bg-Input-Bg text-Blue-File dark:text-white  dark:border-transparent dark:bg-cyan-800 rounded mt-5;
+  }
+
+  .dropArea {
+    @apply flex flex-col items-center justify-center border dark:border-gray-300 cursor-pointer max-w-md w-full bg-transparent border-Blue-File  dark:shadow-md rounded-lg px-6 py-2 hover:bg-Blue-File  dark:hover:bg-white;
+  }
+
+  .jsonFile {
+    @apply bg-transparent  dark:bg-Blue-File border dark:border-white rounded-md py-6 px-4 mt-4 border-Blue-Border;
+    div {
+      @apply hover:bg-Blue-File hover:text-white dark:hover:bg-Blue-Primary  hover:p-1 p-1 rounded;
+    }
+
+    div a img {
+      @apply w-6 h-6;
+    }
+    div a {
+      @apply text-xs text-Blue-File hover:text-white dark:text-white;
+    }
+  }
+
+  .testScroll::-webkit-scrollbar {
+    @apply w-0;
+  }
+
+  .testScroll::-webkit-scrollbar-thumb {
+    @apply w-0;
+  }
+
+  .operator {
+    .contentOperator {
+      @apply flex items-center border-b border-Blue-Border justify-between text-Blue-File dark:text-Blue-Primary px-4 py-2 cursor-pointer  hover:text-white;
+    }
+
+    li div {
+      @apply hover:text-white text-Blue-File dark:text-white;
+    }
+  }
+
+  .formBorder {
+    @apply border border-Blue-Border  flex-col justify-start rounded-lg mt-4;
+  }
+
+  .programUse {
+    div {
+      @apply flex items-center mb-4 justify-between px-3.5;
+    }
+    input[type="radio"] {
+      @apply w-5 h-5 bg-transparent border-gray-400;
+    }
+    label {
+      @apply text-Blue-File dark:text-White-Bg text-xs;
+    }
+  }
+
+  .programUse1 {
+    h5 {
+      @apply px-4 text-Blue-File dark:text-White-Bg;
+    }
+    div div {
+      @apply flex items-center mb-4 justify-between px-4;
+    }
+    input[type="radio"] {
+      @apply w-5 h-5 bg-transparent dark:bg-transparent;
+    }
+    label {
+      @apply text-Blue-File dark:text-White-Bg text-xs;
+    }
+  }
+
+  .programUseBorder {
+    @apply mt-6 text-Blue-File dark:text-white border-b border-Blue-Border;
+  }
+
+  .button-canvas {
+    @apply dark:bg-Blue-Primary border bg-White-Bg dark:border-Blue-Border rounded p-1 dark:hover:bg-blue-200 hover:border-Blue-Border dark:hover:border-white;
+  }
+
+  .secondaryButton {
+    @apply py-2 px-5 rounded text-Blue-File hover:bg-Blue-File hover:text-white border-Blue-Border  dark:border-Blue-Sidebar border dark:text-[#E6F1F5] dark:hover:bg-Blue-File;
+  }
+
+  .primaryButton {
+    @apply py-2 px-5 rounded  bg-Blue-File hover:bg-slate-700  text-white dark:bg-Blue-File dark:text-[#B2D4E0] dark:hover:bg-Blue-Primary;
+  }
+
+  .iconOperator {
+    @apply text-Blue-File dark:text-white;
+  }
+
+  .textOperator {
+    @apply text-Blue-File dark:text-white;
+  }
+
+  .resizeHandle {
+    @apply top-0 absolute bg-Blue-Border h-1 w-full cursor-n-resize dark:bg-Blue-Primary;
+  }
+
+  .tab-link {
+    @apply text-gray-500 hover:text-gray-700 border-transparent hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm;
+  }
+
+  .tab-content {
+    @apply text-Blue-File dark:text-white;
+
+    div div {
+      label {
+        @apply text-Blue-File dark:text-white;
+      }
+      select,
+      input {
+        @apply w-[110px] bg-Blue-Primary text-white;
+      }
+    }
+  }
+
+  .HgridDE {
+    span {
+      @apply hover:text-Yellow-Primary;
+    }
+  }
+
+  .HgridAN {
+    span {
+      @apply hover:text-Purpple-Primary;
+    }
+  }
+}

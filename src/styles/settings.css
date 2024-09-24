@@ -1,0 +1,16 @@
+/**
+ * src/styles/settings.scss
+ *
+ * Configures SASS variables and Vuetify overwrites
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .sidebar {
+    @apply bg-White-Bg dark:bg-Blue-Sidebar  w-[62px] h-[100vh] text-center flex flex-col justify-between;
+  }
+  .sidebar a {
+    @apply text-black dark:text-white;
+  }
+}/*# sourceMappingURL=settings.css.map */
